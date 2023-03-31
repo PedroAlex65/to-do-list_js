@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: 123px;
+  margin-top: 135px;
+}
+.container .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.container .nav .image-up {
+  margin-right: 153px;
+}
+.container .section {
+  display: flex;
+  gap: 50px;
+}
+.container .section .category {
+  display: flex;
+  margin-top: 150px;
+  gap: 35px;
+}
+.container .section .category .circles {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 52px;
+}
+.container .section .category .circles input {
+  transform: translateX(7px);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+}
+.container .section .category .category-names {
+  display: flex;
+  flex-direction: column;
+  font-family: "Righteous", cursive;
+  color: #808080;
+  font-size: 20px;
+  line-height: 35px;
+  gap: 51px;
+}
+.container .section .category .category-names p {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  color: #808080;
+}
+.container .section .container-task {
+  margin-top: 147px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.container .section .container-task .taks {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 30px;
+  width: 379px;
+  height: 187px;
+  background-color: #fff9de;
+}
+.container .section .container-task .taks h1 {
+  margin-left: 24px;
+  margin-top: 15px;
+  font-family: "Righteous";
+  font-size: 20px;
+  line-height: 25px;
+}
+.container .section .container-task .taks p {
+  margin-left: 24px;
+  font-family: "Righteous";
+  font-size: 15px;
+  line-height: 19px;
+  color: #595959;
+}
+.container .section .container-task .taks .done {
+  display: flex;
+  justify-content: end;
+  margin-right: 15px;
+  margin-top: 20px;
+  gap: 10px;
+}
+.container .section .container-task .taks .done input {
+  width: 20px;
+  height: 20px;
+}
+.container .section .container-task .taks .done p {
+  font-family: "Righteous";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+}/*# sourceMappingURL=main.css.map */
