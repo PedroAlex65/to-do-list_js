@@ -1,76 +1,83 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  margin-left: 123px;
-  margin-top: 135px;
+body {
+  width: 100vw;
+  height: 100vh;
 }
-.container .nav {
+body .container {
+  margin-left: 7.68rem;
+  margin-top: 8.4rem;
+}
+body .container .nav {
   display: flex;
   justify-content: space-between;
 }
-.container .nav .image-up {
-  margin-right: 153px;
+body .container .nav .image-up {
+  margin-right: 9.5rem;
 }
-.container .section {
+body .container .section {
   display: flex;
-  gap: 50px;
+  gap: 3.1rem;
 }
-.container .section .category {
+body .container .section .category {
   display: flex;
-  margin-top: 150px;
-  gap: 35px;
+  margin-top: 9.3rem;
+  gap: 2.1rem;
 }
-.container .section .category .circles {
+body .container .section .category .circles {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  gap: 52px;
+  gap: 3.2rem;
 }
-.container .section .category .circles input {
+body .container .section .category .circles input {
   transform: translateX(7px);
-  width: 20px;
-  height: 20px;
+  width: 1.2rem;
+  height: 1.2rem;
   border: 1px solid #000000;
 }
-.container .section .category .category-names {
+body .container .section .category .category-names {
   display: flex;
   flex-direction: column;
   font-family: "Righteous", cursive;
   color: #808080;
-  font-size: 20px;
-  line-height: 35px;
-  gap: 51px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  gap: 3.1rem;
 }
-.container .section .category .category-names p {
+body .container .section .category .category-names p {
   font-family: "Pacifico";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
   color: #808080;
 }
-.container .section .container-task {
-  margin-top: 147px;
+body .container .section .container-task {
+  max-height: 24.5rem; /* Define a altura máxima da lista para 300px */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando a lista excede a altura máxima */
+  margin-top: 9.1rem;
   display: grid;
-  gap: 20px;
+  gap: 1.2rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.container .section .container-task .task {
+body .container .section .container-task .task {
   overflow: hidden;
   display: flex;
   border-radius: 10px;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.8rem;
   width: 379px;
   height: 187px;
   background-color: #fff9de;
 }
-.container .section .container-task .task .text,
-.container .section .container-task .task h1 {
+body .container .section .container-task .task .text,
+body .container .section .container-task .task h1 {
   width: 190px;
   height: 31px;
   border: none;
@@ -81,11 +88,11 @@
   font-size: 20px;
   line-height: 25px;
 }
-.container .section .container-task .task .let {
+body .container .section .container-task .task .let {
   text-decoration: line-through;
 }
-.container .section .container-task .task textarea,
-.container .section .container-task .task .areaTranformEndParagraph {
+body .container .section .container-task .task textarea,
+body .container .section .container-task .task .areaTranformEndParagraph {
   overflow: hidden;
   border-radius: 8px;
   border: none;
@@ -99,16 +106,300 @@
   line-height: 19px;
   color: #595959;
 }
-.container .section .container-task .task .done {
+body .container .section .container-task .task .done {
+  margin-bottom: 10px;
   margin-left: 24px;
   display: flex;
   gap: 50px;
 }
-.container .section .container-task .task .done .image-checked {
+body .container .section .container-task .task .done .image-checked {
   width: 25px;
   height: 25px;
 }
-.container .section .container-task .task .done .image-delete {
+body .container .section .container-task .task .done .image-delete {
   width: 25px;
   height: 25px;
+}
+body .container .section .container-task .concluida {
+  display: flex;
+}
+
+@media (max-width: 1280px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  body .container {
+    margin-left: 50px;
+    margin-top: 105px;
+  }
+  body .container .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .container .nav .image-up {
+    margin-right: 50px;
+  }
+  body .container .section {
+    display: flex;
+    gap: 50px;
+  }
+  body .container .section .category {
+    display: flex;
+    margin-top: 100px;
+    gap: 35px;
+  }
+  body .container .section .category .circles {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 52px;
+  }
+  body .container .section .category .circles input {
+    transform: translateX(7px);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+  }
+  body .container .section .category .category-names {
+    display: flex;
+    flex-direction: column;
+    font-family: "Righteous", cursive;
+    color: #808080;
+    font-size: 20px;
+    line-height: 35px;
+    gap: 51px;
+  }
+  body .container .section .category .category-names p {
+    font-family: "Pacifico";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #808080;
+  }
+  body .container .section .container-task {
+    max-height: 392px; /* Define a altura máxima da lista para 300px */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando a lista excede a altura máxima */
+    margin-top: 100px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .container .section .container-task .task .text,
+  body .container .section .container-task .task .done {
+    margin-bottom: 10px;
+  }
+  body .container .section .container-task .concluida {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  body .container {
+    margin-left: 50px;
+    margin-top: 105px;
+  }
+  body .container .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .container .nav .image-up {
+    margin-right: 20px;
+  }
+  body .container .section {
+    display: flex;
+    gap: 10px;
+  }
+  body .container .section .category {
+    display: flex;
+    margin-top: 120px;
+    gap: 10px;
+  }
+  body .container .section .category .circles {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 72px;
+  }
+  body .container .section .category .circles img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  body .container .section .category .circles input {
+    transform: translateX(7px);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid #000000;
+  }
+  body .container .section .category .category-names {
+    display: flex;
+    flex-direction: column;
+    font-family: "Righteous", cursive;
+    color: #808080;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    gap: 4.5rem;
+  }
+  body .container .section .category .category-names p {
+    font-family: "Pacifico";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: #808080;
+  }
+  body .container .section .container-task {
+    max-height: 28.1rem; /* Define a altura máxima da lista para 300px */
+    overflow-x: auto;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando a lista excede a altura máxima */
+    margin-top: 7.5rem;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .container .section .container-task .task {
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 21.1rem;
+    height: 11.6rem;
+    background-color: #fff9de;
+  }
+  body .container .section .container-task .task .text,
+  body .container .section .container-task .task h1 {
+    width: 11.8rem;
+    height: 1.9rem;
+    border: none;
+    border-radius: 8px;
+    margin-left: 1.5rem;
+    margin-top: 0.9rem;
+    font-family: "Righteous";
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 24.3rem) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  body .container {
+    margin-left: 2rem;
+    margin-top: 1.8rem;
+  }
+  body .container .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .container .nav .image-up {
+    margin-right: 0px;
+  }
+  body .container .section {
+    display: flex;
+    gap: 3.1rem;
+  }
+  body .container .section .category {
+    display: none;
+    gap: 2.1rem;
+  }
+  body .container .section .category .circles {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+  }
+  body .container .section .category .circles input {
+    transform: translateX(7px);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+  }
+  body .container .section .category .category-names {
+    display: flex;
+    flex-direction: column;
+    font-family: "Righteous", cursive;
+    color: #808080;
+    font-size: 1.25rem;
+    line-height: 2.1rem;
+    gap: 3.1rem;
+  }
+  body .container .section .category .category-names p {
+    font-family: "Pacifico";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    color: #808080;
+  }
+  body .container .section .container-task {
+    max-height: 31.2rem; /* Define a altura máxima da lista para 300px */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando a lista excede a altura máxima */
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+  body .container .section .container-task .task {
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 20.6rem;
+    height: 11.6rem;
+    background-color: #fff9de;
+  }
+  body .container .section .container-task .task .text,
+  body .container .section .container-task .task h1 {
+    width: 11.8rem;
+    height: 1.9rem;
+    border: none;
+    border-radius: 8px;
+    margin-left: 1.5rem;
+    margin-top: 0.9rem;
+    font-family: "Righteous";
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  body .container .section .container-task .task .let {
+    text-decoration: line-through;
+  }
+  body .container .section .container-task .task textarea,
+  body .container .section .container-task .task .areaTranformEndParagraph {
+    overflow: hidden;
+    border-radius: 8px;
+    border: none;
+    width: 18.1rem;
+    height: 4.7rem;
+    word-wrap: break-word;
+    resize: none;
+    margin-left: 1.5rem;
+    font-family: "Righteous";
+    font-size: 0.9;
+    line-height: 1.1rem;
+    color: #595959;
+  }
+  body .container .section .container-task .task .done {
+    margin-bottom: 0.6rem;
+    margin-left: 1.5rem;
+    display: flex;
+    gap: 3.1rem;
+  }
+  body .container .section .container-task .task .done .image-checked {
+    width: 1.56rem;
+    height: 1.56rem;
+  }
+  body .container .section .container-task .task .done .image-delete {
+    width: 1.56rem;
+    height: 1.56rem;
+  }
+  body .container .section .container-task .concluida {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */

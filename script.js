@@ -1,5 +1,6 @@
 const imageMore = document.querySelector(".image-up");
 const ul = document.querySelector(".container-task");
+const hideInput = document.querySelector(".checkbox");
 
 function createLi() {
   let loopCreateLi = 1;
@@ -37,12 +38,33 @@ function createLi() {
         .closest("li")
         .querySelector(".areaTranformEndParagraph");
       p.style.textDecoration = "line-through";
+      li.classList.add("concluida");
     }
     imageChecked.addEventListener("click", handleChecked);
   }
 }
 
 imageMore.addEventListener("click", createLi);
+
+function hideDoneTask(event) {
+  const checkbox = event.target;
+
+  const ancestral = checkbox
+    .closest(".section")
+    .querySelector(".container-task");
+
+  const tasks = ancestral.querySelectorAll(".task");
+
+  tasks.forEach((task) => {
+    const isDone = task.classList.contains("concluida");
+    if (checkbox.checked && isDone) {
+      task.style.display = " none";
+    } else {
+      task.style.display = " flex";
+    }
+  });
+}
+hideInput.addEventListener("change", hideDoneTask);
 
 function valueInput(event) {
   const target = event.target;
