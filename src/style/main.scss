@@ -59,8 +59,9 @@
       margin-top: 147px;
       display: grid;
       gap: 20px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      .taks {
+      grid-template-columns: 1fr 1fr 1fr;
+      .task {
+        overflow: hidden;
         display: flex;
         border-radius: 10px;
         flex-direction: column;
@@ -68,37 +69,49 @@
         width: 379px;
         height: 187px;
         background-color: #fff9de;
+        .text,
         h1 {
+          width: 190px;
+          height: 31px;
+          border: none;
+          border-radius: 8px;
           margin-left: 24px;
           margin-top: 15px;
           font-family: "Righteous";
           font-size: 20px;
           line-height: 25px;
         }
-        p {
+
+        .let {
+          text-decoration: line-through;
+        }
+        textarea,
+        .areaTranformEndParagraph {
+          overflow: hidden;
+          border-radius: 8px;
+          border: none;
+          width: 290px;
+          height: 76px;
+          word-wrap: break-word;
+          resize: none;
           margin-left: 24px;
           font-family: "Righteous";
           font-size: 15px;
           line-height: 19px;
           color: #595959;
         }
+
         .done {
+          margin-left: 24px;
           display: flex;
-          justify-content: end;
-          margin-right: 15px;
-          margin-top: 20px;
-          gap: 10px;
-          input {
-            width: 20px;
-            height: 20px;
+          gap: 50px;
+          .image-checked {
+            width: 25px;
+            height: 25px;
           }
-          p {
-            font-family: "Righteous";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 19px;
-            color: #000000;
+          .image-delete {
+            width: 25px;
+            height: 25px;
           }
         }
       }
