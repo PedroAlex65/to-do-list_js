@@ -75,6 +75,19 @@ body {
           width: 379px;
           height: 187px;
           background-color: #fff9de;
+          animation: taskTransparent  alternate .7s ease;
+
+
+          @keyframes taskTransparent{
+
+            0%{
+                transform: translateX(-1000px);
+            }
+        
+            100%{
+                transform: translateX( 0);
+            }
+        }
           .text,
           h1 {
             width: 190px;

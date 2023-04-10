@@ -75,6 +75,15 @@ body .container .section .container-task .task {
   width: 379px;
   height: 187px;
   background-color: #fff9de;
+  animation: taskTransparent alternate 0.7s ease;
+}
+@keyframes taskTransparent {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 body .container .section .container-task .task .text,
 body .container .section .container-task .task h1 {
